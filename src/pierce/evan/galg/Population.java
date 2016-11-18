@@ -10,26 +10,34 @@ public class Population {
 	
 	public Population(int popSize){
 		
+		gen = 1;
 		this.popSize = popSize;
 		this.population = genRandPopulation(popSize);
 		
 		
 	}
-	/*
+	
+	public void incrementGeneration(){
+		gen++;
+	}
+	
+	public int getGeneration(){
+		return gen;
+	}
+	
 	public float getHighestFitness(){
-		float highestFit = population[0];
+		float highestFit = population[0].getFitness();
 		
 		
 		for (int i = 0; i < population.length; i++){
-			if(){}
-			population[i].getFitness()
-			
+			if(highestFit < population[i].getFitness()){
+				highestFit = population[i].getFitness();
+			}
 		}
 		
 		
 		return highestFit;
 	}
-	*/
 	
 	
 	public DNA[] genRandPopulation(int size){
@@ -51,7 +59,7 @@ public class Population {
 		ArrayList<DNA> prob = new ArrayList<DNA>();
 		
 		for(int i = 0; i < population.length; i++){
-			for	(int c = 0; c < population[i].getFitness() * 1000; c++){
+			for	(int c = 0; c < population[i].getFitness() * 100; c++){
 				prob.add(population[i]);
 			}
 			
@@ -96,7 +104,7 @@ public class Population {
 	}
 	
 
-	public DNA[] mutate(float chance){
+	public DNA[] mutate(double chance){
 		for(int i = 0; i < population.length; i++){
 			DNA d = population[i];
 			
