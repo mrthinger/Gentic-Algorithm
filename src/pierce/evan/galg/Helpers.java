@@ -3,7 +3,7 @@ package pierce.evan.galg;
 public class Helpers {
 
 	/*
-	 * @return random upper or lower case char 
+	 * @return random upper/lower case char or a ' '. 
 	 */
 	public static char genChar(){
 		//65-90 Uppercase letters
