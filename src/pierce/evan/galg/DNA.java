@@ -12,8 +12,8 @@ public class DNA {
 	//Generates random DNA.
 	public DNA(){
 		
-		this.length = GeneticAlgMain.TARGET_LENGTH;
 		this.data = genRandomData(GeneticAlgMain.TARGET_LENGTH);
+		this.length = this.data.length();
 		this.fitness = calcFitness(GeneticAlgMain.TARGET);
 		
 	}
@@ -21,8 +21,8 @@ public class DNA {
 	//Generates DNA based off entered data.
 	public DNA(String data){
 		
-		this.length = data.length();
 		this.data = data;
+		this.length = this.data.length();
 		this.fitness = calcFitness(GeneticAlgMain.TARGET);
 		
 	}
@@ -52,6 +52,7 @@ public class DNA {
 		}
 		
 		this.fitness = ((float)numCharCorrect / (float)length);
+		this.fitness = (float) Math.pow(fitness, 3);
 		
 		return fitness;
 	}

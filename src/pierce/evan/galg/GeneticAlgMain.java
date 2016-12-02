@@ -2,7 +2,8 @@ package pierce.evan.galg;
 
 public class GeneticAlgMain {
 
-	public static final String TARGET = "Genetic Algorithms Are Cool";
+	//public static final String TARGET = "Genetic Algorithms Are Cool";
+	public static final String TARGET = "Super duper long sentence of super longness jk this is even way longer like off the page";
 	public static final int TARGET_LENGTH = TARGET.length();
 
 	public static final int POPULATION_SIZE = 2000;
@@ -45,11 +46,11 @@ public class GeneticAlgMain {
 			//Is now a new generation of DNA, so increment it
 			pop.incrementGeneration();
 
-			/* Uncomment for visual of all DNA
-
+			//Uncomment for visual of all DNA
+			/*
 			for(int i = 0; i < pop.population.length; i++){
 
-				System.out.println("DATA: " + pop.population[i].getData() + " FITNESS: " + pop.population[i].getFitness());
+				System.out.println("GEN: " + pop.getGeneration() + " DATA: " + pop.population[i].getData() + " FITNESS: " + pop.population[i].getFitness());
 
 
 			}

@@ -16,7 +16,7 @@ public class Helpers {
 		char c = (Math.random() > .5)? upper : lower;
 		
 		
-		return (Math.random() >= 0.002)? c : ' ';
+		return (Math.random() >= 0.017)? c : ' ';
 	}
 	
 }

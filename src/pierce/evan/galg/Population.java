@@ -81,7 +81,7 @@ public class Population {
 		ArrayList<DNA> prob = new ArrayList<DNA>();
 		
 		for(int i = 0; i < population.length; i++){
-			for	(int c = 0; c < population[i].getFitness() * 100; c++){
+			for	(int c = 0; c < population[i].getFitness() * 1000; c++){
 				prob.add(population[i]);
 			}
 			
